@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+/* === ROOT THEME VARIABLES === */
+:root {
+  /* System Defaults */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Browser Theme Support */
+  color-scheme: light dark;
+  
+  /* Font Family */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  /* Base Colors */
+  --color-background: 255 255 255;
+  --color-foreground: 10 10 10;
+  --color-primary: 243 128 32; /* Cloudflare orange */
+  --color-primary-foreground: 255 255 255;
+  --color-secondary: 245 245 245;
+  --color-secondary-foreground: 10 10 10;
+  --color-border: 229 229 229;
+  --color-input: 255 255 255;
+  --color-ring: 243 128 32;
+}
+
+/* === DARK MODE === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: 10 10 10;
+    --color-foreground: 250 250 250;
+    --color-secondary: 24 24 27;
+    --color-secondary-foreground: 250 250 250;
+    --color-border: 39 39 42;
+    --color-input: 24 24 27;
+  }
+}
+
+.dark {
+  --color-background: 10 10 10;
+  --color-foreground: 250 250 250;
+  --color-secondary: 24 24 27;
+  --color-secondary-foreground: 250 250 250;
+  --color-border: 39 39 42;
+  --color-input: 24 24 27;
+}
+
+/* === BASE LAYER === */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  a {
+    color: rgb(var(--color-primary));
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  button {
+    font-family: inherit;
+  }
+}
+
+/* === UTILITIES === */
+@layer utilities {
+  .bg-background {
+    background-color: rgb(var(--color-background));
+  }
+  
+  .text-foreground {
+    color: rgb(var(--color-foreground));
+  }
+  
+  .bg-primary {
+    background-color: rgb(var(--color-primary));
+  }
+  
+  .text-primary {
+    color: rgb(var(--color-primary));
+  }
+  
+  .text-primary-foreground {
+    color: rgb(var(--color-primary-foreground));
+  }
+  
+  .bg-secondary {
+    background-color: rgb(var(--color-secondary));
+  }
+  
+  .text-secondary-foreground {
+    color: rgb(var(--color-secondary-foreground));
+  }
+  
+  .border-border {
+    border-color: rgb(var(--color-border));
+  }
+}

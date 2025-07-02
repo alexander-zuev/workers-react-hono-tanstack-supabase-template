@@ -1,0 +1,33 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.worker.json"
+    }
+  ],
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    /* Path aliases for clean imports across the monorepo */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/frontend/*"
+      ],
+      "@/backend/*": [
+        "./src/backend/*"
+      ],
+      "@tests/*": [
+        "./tests/*"
+      ],
+      "@shared/*": [
+        "./src/shared/*"
+      ]
+    }
+  }
+}

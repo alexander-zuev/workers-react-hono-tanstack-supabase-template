@@ -1,0 +1,42 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "your-app-name",
+  "main": "./src/backend/worker.ts",
+  "compatibility_date": "2025-06-17",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true,
+  "assets": {
+    "directory": "./dist/client",
+    "not_found_handling": "single-page-application"
+  },
+  "placement": {
+    "mode": "smart"
+  },
+  "vars": {
+    "PNPM_VERSION": "10.11.0"
+  },
+  "routes": [
+    {
+      "pattern": "your-domain.com",
+      "custom_domain": true
+    }
+  ],
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "your-hyperdrive-id-here",
+      "localConnectionString": "postgresql://username:password@127.0.0.1:54322/postgres"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "0 * * * *",
+      "0 0 * * *"
+    ]
+  }
+}

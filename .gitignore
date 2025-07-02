@@ -1,0 +1,209 @@
+# ---------------------------
+# Dependencies & Package Managers
+# ---------------------------
+node_modules/
+jspm_packages/
+.web_modules/
+bower_components/
+.yarn/cache
+.yarn/unplugged
+.pnp.*
+.lock-wscript
+
+# ---------------------------
+# Build Outputs & Artifacts
+# ---------------------------
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vuepress/dist/
+.temp/
+.cache/
+.parcel-cache/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# ---------------------------
+# Environment & Configuration
+# ---------------------------
+# Environment files with secrets
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+.dev.vars
+.dev.vars.*
+
+# KEEP example files (templates)
+!.env.example
+!.env.*.example
+
+# ---------------------------
+# Cloud & Serverless
+# ---------------------------
+.wrangler/
+.serverless/
+.terraform/
+
+# ---------------------------
+# Supabase
+# ---------------------------
+.supabase/.env*
+.supabase/.temp/
+.supabase/.volumes/
+.supabase/docker/
+.supabase/migrations/.shadow/
+.supabase/.branches/
+
+# ---------------------------
+# Frontend & React/Vite Specific
+# ---------------------------
+# TanStack Router cache
+.tanstack/
+
+# Storybook
+storybook-static/
+*storybook.log
+
+# ---------------------------
+# IDEs & Editors
+# ---------------------------
+.vscode/
+.idea/
+.windsurf/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ---------------------------
+# Logs & Diagnostics
+# ---------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ---------------------------
+# Testing & Coverage
+# ---------------------------
+coverage/
+.coverage/
+.nyc_output/
+.pytest_cache/
+htmlcov/
+*.cover
+*.py,cover
+.hypothesis/
+coverage.xml
+
+# ---------------------------
+# Static Analysis & Type Checking
+# ---------------------------
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ---------------------------
+# Python (for scripts)
+# ---------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+ENV/
+.pdm.toml
+.pdm-python
+.pdm-build/
+__pypackages__/
+
+# ---------------------------
+# Application Specific
+# ---------------------------
+# Test files
+test-markdown/inputs/*
+test-markdown/outputs/*
+!test-markdown/inputs/.gitkeep
+!test-markdown/outputs/.gitkeep
+
+# Application data
+celerybeat-schedule
+celerybeat.pid
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+instance/
+.webassets-cache
+.scrapy
+
+# ---------------------------
+# Security & Secrets
+# ---------------------------
+# Claude Code configuration
+.claude/
+
+# Claude MCP configuration
+.mcp.json
+
+# Keys and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+*secret*
+*token*
+!**/test/**/*token*
+!**/tests/**/*token*
+
+# ---------------------------
+# Temporary & System Files
+# ---------------------------
+.tmp/
+tmp/
+*.tmp
+*.temp
+pids/
+*.pid
+*.seed
+*.pid.lock
+*.tgz
+*.egg
+
+# ---------------------------
+# Documentation & Misc
+# ---------------------------
+.site/
+docs/_build/
+site/
+.code/
+CLAUDE.local.md
+
+# ---------------------------
+# Package & Build Related
+# ---------------------------
+pip-log.txt
+pip-delete-this-directory.txt
+*.manifest
+*.spec
+*.egg-info/
+MANIFEST
+# Sentry Config File
+.env.sentry-build-plugin
